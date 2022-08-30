@@ -308,6 +308,7 @@ class Projection(object):
         self.Wal = self.Wal[:,:self.co.Nl]
 
         # Apply masking centered around the value of k
+        Wal_masked = self.Wal
         if withmask:
             kpgrid, kgrid = np.meshgrid(self.p, self.co.k, indexing='ij')
             mask = (kpgrid < kgrid + windowk) & (kpgrid > kgrid - windowk)
