@@ -5,10 +5,10 @@ from scipy.interpolate import interp1d
 from scipy.integrate import quad
 from scipy.special import legendre, spherical_jn, j1
 from copy import deepcopy 
-from fftlog import FFTLog, MPC
-from common import co
-from greenfunction import GreenFunction
-from fourier import FourierTransform
+from .fftlog import FFTLog, MPC
+from .common import co
+from .greenfunction import GreenFunction
+from .fourier import FourierTransform
 
 # import importlib, sys
 # importlib.reload(sys.modules['greenfunction'])

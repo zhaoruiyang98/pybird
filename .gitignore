@@ -168,3 +168,12 @@ cython_debug/
 # static files generated from Django application using `collectstatic`
 media
 static
+
+# install info
+*.egg-info/
+
+# vscode
+/.vscode/
+
+# pybird data
+*.npy
