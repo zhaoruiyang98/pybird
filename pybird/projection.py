@@ -86,7 +86,7 @@ class Projection(object):
     - Fiber collision corrections
     - Wedges
     """
-    def __init__(self, xout, Om_AP=None, z_AP=None, nbinsmu=100, 
+    def __init__(self, xout, Om_AP=None, z_AP=None, nbinsmu=200, 
         window_fourier_name=None, path_to_window=None, window_configspace_file=None, 
         binning=False, fibcol=False, Nwedges=0, wedges_bounds=None, 
         zz=None, nz=None, co=co):
