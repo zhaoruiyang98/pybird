@@ -256,6 +256,10 @@ class Projection(object):
             else:    
                 try:
                     swindow_config_space = np.loadtxt(self.window_configspace_file)
+                    if swindow_config_space[0, 0] == 0.0:
+                        swindow_config_space = swindow_config_space[1:, :]
+                    if swindow_config_space.shape[-1] > (1 + 3):
+                        swindow_config_space = swindow_config_space[:, :4]
                 except:
                     print ('Error: can\'t load mask file: %s.'%self.window_configspace_file)
                     compute = False

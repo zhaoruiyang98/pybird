@@ -3,11 +3,11 @@ import numpy as np
 from numpy import pi, cos, sin, log, exp, sqrt, trapz
 from numpy.fft import rfft
 from scipy.interpolate import interp1d
-from scipy.special import gamma
+from scipy.special import gamma, loggamma
 
 def MPC(l, pn):
     """ matrix for spherical bessel transform from power spectrum to correlation function """
-    return pi**-1.5 * 2.**(-2. * pn) * gamma(1.5 + l / 2. - pn) / gamma(l / 2. + pn)
+    return pi**-1.5 *2.**(-2. * pn) * exp(loggamma(1.5 + l / 2. - pn) - loggamma(l / 2. + pn))
 
 def CoefWindow(N, window=1, left=True, right=True):
     """ FFTLog auxiliary function: window sending the FFT coefficients to 0 at the edges. Adapted from fast-pt """
